@@ -1,0 +1,144 @@
+@startuml
+class bd.Conexion #yellow{
+-private String BD
+-private String URL
+-private String User
+-private String Pass
+
++setConexion()
++getConexion(BD,URL,User,Pass)
++setBD()
++getBD()
++setURL()
++getURL()
++setUser()
++getUser()
++setPass()
++getPass()
++setConectaServer()
++getConectaServer()
++setConectaBD()
++getConectaBD()
++setEjecuta()
++getEjecuta()
+
+
+
+}
+class entity.Usuario #green{
+-private String usuario
+-private String contraseña
+-private String confirmarContraseña
+-private String rol
++void Usuario()
++void Usuario(usuario,contraseña,confirmarContraseña,rol)
++setUsuario()
++getUsuario()
++setContraseña()
++getContraseña()
++setConfirmarContraseña()
++getConfirmarContraseña()
++setRol()
++getRol()
+}
+class entity.Venta #green{
+-private String codigo 
++void Venta()
++void Venta(Codigo)
++setCodigo()
++getCodigo()
+
+}
+class entity.Productos #green{
+-private String Codigo
+-private String Nombre
+-private String Descripción
+-private String Cantidad
+-private String Preciocosto
+-private Strin  Precioventa
+
++setProductos()
++getProductos(Codigo,Nombre,Descripcion,Cantidad,Precio costo,Precio venta)
++setCodigo()
++getCodigo()
++setNombre()
++getNombre()
++setDescripcion()
++getDescripcion()
++setCantidad()
++getCantidad()
++setPreciocosto()
++getPreciocosto()
++setPrecioventa()
++getPrecioventa()
+}
+Interface model.IUsuarioModel #gray{
+-DefaultTablemodel TablaUsuario
+}
+Interface model.IVenta #gray{
+-DefaultTablemodel TablaVenta
+}
+Interface model.IProducto #gray{
+-DefaultTablemodel TablaProducto
+}
+class Controller.UsuarioController #blue{
+}
+class Controller.ReporteController #blue{
+}
+class Controller.VentaController #blue{
+}
+class Controller.ProductoController #blue{
+}
+class Controller.ReporteProductoController #blue{
+}
+class view.Principal #red{
+-btnLogin
+-btnPrincipal
+-btnVentas
+-btnUsuarios
+-btnReporte
+-btnProductos
+-btnNuevoProducto
+-btnEliminarProducto
+-btnModificarProducto
+-btnLogin
+-btnCorte
+-btnInventario
+}
+class view.Ventas #red{
+-btnAgregarProducto
+-btnBorrarArticulodelaVenta
+-btnBuscarProducto
+}
+class view.Usuarios #red{
+-btnAgregarUsuarios
+}
+class view.Reporte #red{
+-btnGeneraReporte
+}
+class view.Productos #red{
+-btnNuevo
+-btnModificar
+-btnEliminar
+}
+class view.NuevoProducto #red{
+-btnAceptar
+}
+class view.EliminarProducto #red{
+-btnEliminaresteProducto
+}
+class view.ModificarProducto #red{
+-btnGuardar
+
+}
+class view.Login #red{
+-btnAceptar
+-btnSalir
+}
+class view.Corte #red{
+-btnGenerarCorte
+}
+class view.Inventario #red{
+
+}
+@enduml
